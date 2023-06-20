@@ -13,7 +13,7 @@ function updateData(temperature, humidity, discomfortIndex) {
 // 서버로 데이터 전송 함수
 function sendData(temperature, humidity, discomfortIndex) {
   var xhr = new XMLHttpRequest();
-  var url = "https://animated-cat-945af1.netlify.app/update"; // Arduino 코드에서 사용한 서버 URL로 변경해야 합니다.
+  var url = "https://tourmaline-frangollo-56be17.netlify.app/update"; // Arduino 코드에서 사용한 서버 URL로 변경해야 합니다.
 
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -27,7 +27,7 @@ function sendData(temperature, humidity, discomfortIndex) {
 }
 
 // 웹 소켓을 통해 아두이노에서 데이터 수신
-var socket = new WebSocket("ws://https://animated-cat-945af1.netlify.app:443"); // Arduino 코드에서 사용한 서버 주소 및 포트로 변경해야 합니다.
+var socket = new WebSocket("ws://https://tourmaline-frangollo-56be17.netlify.app:443"); // Arduino 코드에서 사용한 서버 주소 및 포트로 변경해야 합니다.
 socket.onmessage = function (event) {
   var data = JSON.parse(event.data);
   var temperature = data.temperature;
