@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+#dataContainer {
+  margin-top: 50px;
+}
+
+#temperature, #humidity, #discomfortIndex {
+  font-size: 18px;
+}
